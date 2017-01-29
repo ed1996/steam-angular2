@@ -1,0 +1,23 @@
+<div id="container">
+  <div id="container2">
+    <h1>Steam App</h1>
+    <hr>
+    <p>Gamer for life</p>
+  </div>
+</div>
+<hr class="stroke">
+<h2 class="big_title">Top trois des jeux de la semaine</h2>
+<hr class="stroke">
+<ul>
+  <li *ngFor="let jeu of jeux | slice:0:3">
+   <div class="description">
+        <h2>{{jeu.name}}</h2>
+        <p>{{jeu.summary}}</p>
+        <div class="images" *ngFor="let screen of jeu.screenshots">
+      <img src="{{screen.url}}" />
+   </div>
+   </div>
+  </li>
+</ul>
+
+ 

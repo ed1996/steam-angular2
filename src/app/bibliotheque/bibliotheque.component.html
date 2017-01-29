@@ -1,0 +1,24 @@
+<div id="container">
+  <div id="container2">
+    <h1>Steam App</h1>
+    <hr>
+    <p>Gamer for life</p>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor="let jeu of jeux | paginate: { itemsPerPage: 3, currentPage: p}" class="game">
+<div class="description">
+    {{jeu.name}} <br>
+    <div class="images" *ngFor="let screen of jeu.screenshots">
+   <img src="{{screen.url}}" />
+   </div>
+    <div id="heart">
+            <input type="checkbox"/>
+          </div>
+    </div>
+  </li>
+</ul>
+<div class="wrap-pagination">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
