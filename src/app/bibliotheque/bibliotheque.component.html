@@ -9,7 +9,7 @@
 <ul>
   <li *ngFor="let jeu of jeux | paginate: { itemsPerPage: 3, currentPage: p}" class="game">
 <div class="description">
-    {{jeu.name}} <br>
+   <h2>{{jeu.name}}</h2> <br>
     <div class="images" *ngFor="let screen of jeu.screenshots">
    <img src="{{screen.url}}" />
    </div>
